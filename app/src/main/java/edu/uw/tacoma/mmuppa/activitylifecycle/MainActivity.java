@@ -1,10 +1,12 @@
 package edu.uw.tacoma.mmuppa.activitylifecycle;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 // Go to Emulator --> Settings -> Developer Options --> Don't Keep activities
 // to see onDestroy callback in the Logcat.
@@ -17,6 +19,17 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "OnCreate called");
         setContentView(R.layout.activity_main);
+    }
+
+    /**
+     * Launch the other activity, bound to the button,
+     * finishes this activity.
+     * @param v
+     */
+    public void launchAnother(View v) {
+        Intent i = new Intent(v.getContext(), AnotherActivity.class);
+        startActivity(i);
+        finish();
     }
 
     @Override
