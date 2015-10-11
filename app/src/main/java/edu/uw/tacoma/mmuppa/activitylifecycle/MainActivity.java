@@ -1,8 +1,8 @@
 package edu.uw.tacoma.mmuppa.activitylifecycle;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +11,7 @@ import android.view.View;
 // Go to Emulator --> Settings -> Developer Options --> Don't Keep activities
 // to see onDestroy callback in the Logcat.
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     @Override
